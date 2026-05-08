@@ -46,7 +46,7 @@ export default function Navbar({
           <span className="text-2xl font-serif font-bold tracking-tight text-tsuru-blue">Tsuru</span>
         </motion.div>
         
-        <div className="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-tsuru-navy">
+        <div className="hidden lg:flex items-center gap-8 text-xs font-bold tracking-wide text-tsuru-navy">
           <button onClick={onLogoClick} className="hover:text-tsuru-blue transition-colors">{t('common.about')}</button>
           <button onClick={onLogoClick} className="hover:text-tsuru-blue transition-colors">{t('common.culture')}</button>
           <button onClick={onLogoClick} className="hover:text-tsuru-blue transition-colors">{t('common.positioning')}</button>

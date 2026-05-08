@@ -20,7 +20,7 @@ export default function Hero({ onRegister, onAccess }: { onRegister: () => void,
           transition={{ duration: 0.8, ease: "easeOut" }}
           id="hero-content"
         >
-          <span className="inline-block px-6 py-2 rounded-full bg-tsuru-gold text-tsuru-navy text-sm font-black uppercase tracking-[0.2em] mb-6 shadow-lg shadow-tsuru-gold/20">
+          <span className="inline-block px-6 py-2 rounded-full bg-tsuru-gold text-tsuru-navy text-sm font-black tracking-widest mb-6 shadow-lg shadow-tsuru-gold/20">
             {t('hero.badge')}
           </span>
           <h1 className="text-6xl md:text-8xl font-serif leading-[0.9] text-tsuru-ink mb-8">
@@ -54,7 +54,7 @@ export default function Hero({ onRegister, onAccess }: { onRegister: () => void,
                         onRegister();
                         setIsOpen(false);
                       }}
-                      className="w-full text-left px-6 py-3 text-tsuru-navy hover:bg-tsuru-blue/5 transition-colors font-bold uppercase tracking-widest text-xs"
+                      className="w-full text-left px-6 py-3 text-tsuru-navy hover:bg-tsuru-blue/5 transition-colors font-bold tracking-wide text-xs"
                     >
                       {t('common.register')}
                     </button>
@@ -64,7 +64,7 @@ export default function Hero({ onRegister, onAccess }: { onRegister: () => void,
                         onAccess();
                         setIsOpen(false);
                       }}
-                      className="w-full text-left px-6 py-3 text-tsuru-navy hover:bg-tsuru-blue/5 transition-colors font-bold uppercase tracking-widest text-xs"
+                      className="w-full text-left px-6 py-3 text-tsuru-navy hover:bg-tsuru-blue/5 transition-colors font-bold tracking-wide text-xs"
                     >
                       {t('common.login')}
                     </button>
@@ -127,7 +127,7 @@ export default function Hero({ onRegister, onAccess }: { onRegister: () => void,
           >
             <TsuruLogo className="w-12 h-12" />
             <div>
-              <div className="text-tsuru-blue text-sm font-bold uppercase tracking-tighter mb-1">{t('common.symbol')}</div>
+              <div className="text-tsuru-blue text-sm font-bold tracking-tight mb-1">{t('common.symbol')}</div>
               <div className="font-serif italic text-xl text-tsuru-navy">{t('common.longevity')}</div>
             </div>
           </motion.div>

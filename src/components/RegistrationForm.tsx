@@ -175,7 +175,7 @@ export default function RegistrationForm({ selectedPlan, isLoginIntent }: Regist
   };
 
   const inputClass = "w-full px-5 py-4 bg-white border border-tsuru-blue/20 rounded-2xl outline-none focus:ring-2 focus:ring-tsuru-blue/20 transition-all text-tsuru-ink placeholder:text-tsuru-muted/50";
-  const labelClass = "block text-xs font-bold text-tsuru-muted uppercase tracking-widest mb-2 ml-1";
+  const labelClass = "block text-xs font-bold text-tsuru-muted tracking-widest mb-2 ml-1";
 
   if (isLoginIntent && !user) {
     return (
@@ -413,7 +413,7 @@ export default function RegistrationForm({ selectedPlan, isLoginIntent }: Regist
           <div className="bg-tsuru-blue p-8 md:p-12 rounded-[2.5rem] text-white shadow-xl shadow-tsuru-blue/20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-sm font-bold uppercase tracking-widest mb-4 opacity-70">{t('registration.selectedPlan')}</h3>
+                <h3 className="text-sm font-bold tracking-widest mb-4 opacity-70">{t('registration.selectedPlan')}</h3>
                 <div className="relative">
                   <select 
                     className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-2xl outline-none focus:ring-2 focus:ring-white/20 transition-all text-white appearance-none cursor-pointer"
@@ -430,7 +430,7 @@ export default function RegistrationForm({ selectedPlan, isLoginIntent }: Regist
               </div>
 
               <div>
-                <h3 className="text-sm font-bold uppercase tracking-widest mb-4 opacity-70">{t('registration.billingCycle')}</h3>
+                <h3 className="text-sm font-bold tracking-widest mb-4 opacity-70">{t('registration.billingCycle')}</h3>
                 <div className="relative">
                   <select 
                     disabled={formData.plan === 'dopamina'}
@@ -449,7 +449,7 @@ export default function RegistrationForm({ selectedPlan, isLoginIntent }: Regist
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <Calendar className="w-5 h-5 opacity-70" />
-                    <span className="font-bold uppercase tracking-widest text-sm opacity-70">{t('registration.planValidity')}</span>
+                    <span className="font-bold tracking-widest text-sm opacity-70">{t('registration.planValidity')}</span>
                   </div>
                   <span className="text-2xl font-bold">
                     {formData.validityDate ? new Date(formData.validityDate + 'T12:00:00').toLocaleDateString('pt-BR') : '-'}

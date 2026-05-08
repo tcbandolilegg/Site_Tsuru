@@ -38,7 +38,7 @@ export default function CTA({ onOpenContact, onRegister, onAccess }: { onOpenCon
                 onClick={() => setIsOpen(!isOpen)}
                 className="bg-white text-tsuru-navy px-12 py-5 rounded-full text-lg font-bold hover:bg-tsuru-blue hover:text-white transition-all shadow-2xl overflow-hidden relative group flex items-center gap-2"
               >
-                <span className="relative z-10 font-bold uppercase tracking-widest text-sm">{t('common.getStarted')}</span>
+                <span className="relative z-10 font-bold tracking-wide text-sm">{t('common.getStarted')}</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
               </button>
 
@@ -55,7 +55,7 @@ export default function CTA({ onOpenContact, onRegister, onAccess }: { onOpenCon
                         onRegister();
                         setIsOpen(false);
                       }}
-                      className="w-full text-left px-4 py-2 text-sm text-tsuru-navy hover:bg-tsuru-blue/5 transition-colors font-bold uppercase tracking-widest text-xs"
+                      className="w-full text-left px-4 py-2 text-sm text-tsuru-navy hover:bg-tsuru-blue/5 transition-colors font-bold tracking-wide text-xs"
                     >
                       {t('common.register')}
                     </button>
@@ -64,7 +64,7 @@ export default function CTA({ onOpenContact, onRegister, onAccess }: { onOpenCon
                         onAccess();
                         setIsOpen(false);
                       }}
-                      className="w-full text-left px-4 py-2 text-sm text-tsuru-navy hover:bg-tsuru-blue/5 transition-colors font-bold uppercase tracking-widest text-xs"
+                      className="w-full text-left px-4 py-2 text-sm text-tsuru-navy hover:bg-tsuru-blue/5 transition-colors font-bold tracking-wide text-xs"
                     >
                       {t('common.login')}
                     </button>
@@ -75,7 +75,7 @@ export default function CTA({ onOpenContact, onRegister, onAccess }: { onOpenCon
             
             <button 
               onClick={onOpenContact}
-              className="text-white border border-white/30 px-12 py-5 rounded-full text-lg font-medium hover:bg-white/10 transition-all uppercase tracking-widest text-sm"
+              className="text-white border border-white/30 px-12 py-5 rounded-full text-lg font-medium hover:bg-white/10 transition-all tracking-wide text-sm"
             >
               {t('cta.contact')}
             </button>

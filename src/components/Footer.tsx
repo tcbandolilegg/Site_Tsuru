@@ -34,7 +34,7 @@ export default function Footer({ onOpenContact, onLogoClick }: { onOpenContact: 
           </div>
 
           <div>
-            <h4 className="text-tsuru-blue font-bold uppercase tracking-widest text-xs mb-8">{t('footer.platform')}</h4>
+            <h4 className="text-tsuru-blue font-bold tracking-wide text-xs mb-8">{t('footer.platform')}</h4>
             <ul className="space-y-4 text-gray-400">
               <li><a href="#" className="hover:text-white transition-colors">{t('features.items.0.title')}</a></li>
               <li><a href="#" className="hover:text-white transition-colors">{t('common.features')}</a></li>
@@ -43,7 +43,7 @@ export default function Footer({ onOpenContact, onLogoClick }: { onOpenContact: 
           </div>
 
           <div>
-            <h4 className="text-tsuru-blue font-bold uppercase tracking-widest text-xs mb-8">{t('footer.support')}</h4>
+            <h4 className="text-tsuru-blue font-bold tracking-wide text-xs mb-8">{t('footer.support')}</h4>
             <ul className="space-y-4 text-gray-400">
               <li><button onClick={onOpenContact} className="hover:text-white transition-colors">{t('common.contactUs')}</button></li>
               <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>

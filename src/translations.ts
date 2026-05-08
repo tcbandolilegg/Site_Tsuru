@@ -5,13 +5,13 @@ export const translations = {
       login: "Access",
       register: "Register",
       learnMore: "Learn More",
-      about: "ABOUT US",
-      culture: "CULTURE",
-      positioning: "POSITIONING",
-      partnerships: "PARTNERSHIPS",
-      plans: "PLANS",
-      blog: "BLOG",
-      contactUs: "CONTACT US",
+      about: "About Us",
+      culture: "Culture",
+      positioning: "Positioning",
+      partnerships: "Partnerships",
+      plans: "Plans",
+      blog: "Blog",
+      contactUs: "Contact Us",
       search: "Search"
     },
     contact: {
@@ -38,6 +38,80 @@ export const translations = {
       description: "We are a platform focused on managing your medical history. Symbol of health and good luck, we bring Tsuru's wisdom to your life's care.",
       cta: "Manage my history",
       legend: "Tsuru is a sacred bird of Japan. It is the symbol of health, good luck, happiness, longevity, and fortune. Japanese legend says the tsuru can live for a thousand years."
+    },
+    plans: {
+      title: "Choose Your Plan",
+      subtitle: "Select the best option to care for your health with peace of mind.",
+      monthly: "Per month",
+      annual: "Annual",
+      acquire: "Acquire",
+      dopamina: {
+        name: "Dopamine",
+        price: "Free",
+        trial: "3 months free",
+        features: [
+          "Access to list of professionals and institutions",
+          "Consultation or exam scheduling - up to 5",
+          "Continuous use medication alert - only 1",
+          "Clinical analysis laboratory exam - only 1",
+          "Pathological analysis laboratory exams - only 1",
+          "Medical portfolio"
+        ],
+        disabled: [
+          "Exam video records",
+          "Surgery video records"
+        ]
+      },
+      oxitocina: {
+        name: "Oxytocin",
+        price: "$15.00",
+        priceAnnual: "$150.00",
+        features: [
+          "Access to list of professionals and institutions",
+          "Consultation or exam scheduling - up to 15",
+          "Continuous use medication alert - up to 7",
+          "Clinical analysis laboratory exam - up to 3",
+          "Pathological analysis laboratory exams - up to 3",
+          "Medical portfolio",
+          "Exam video records - only 1"
+        ],
+        disabled: [
+          "Surgery video records"
+        ]
+      },
+      seratonina: {
+        name: "Serotonin",
+        price: "$35.00",
+        priceAnnual: "$350.00",
+        features: [
+          "Access to list of professionals and institutions",
+          "Consultation or exam scheduling - up to 30",
+          "Continuous use medication alert - up to 15",
+          "Clinical analysis laboratory exam - up to 4",
+          "Pathological analysis laboratory exams - up to 5",
+          "Medical portfolio",
+          "Exam video records - up to 3"
+        ],
+        disabled: [
+          "Surgery video records"
+        ]
+      },
+      endorfina: {
+        name: "Endorphin",
+        price: "$100.00",
+        priceAnnual: "$1000.00",
+        features: [
+          "Access to list of professionals and institutions",
+          "Consultation or exam scheduling - unlimited",
+          "Continuous use medication alert - unlimited",
+          "Clinical analysis laboratory exam - up to 12",
+          "Pathological analysis laboratory exams - up to 12",
+          "Medical portfolio",
+          "Exam video records - up to 5",
+          "Surgery video records - only 1"
+        ],
+        disabled: []
+      }
     },
     painPoints: {
       title: "No more stress with your data",
@@ -96,17 +170,17 @@ export const translations = {
   },
   "pt-BR": {
     common: {
-      getStarted: "COMEÇAR AGORA",
-      login: "ACESSAR",
-      register: "CADASTRE-SE",
-      learnMore: "SAIBA MAIS",
-      about: "QUEM SOMOS",
-      culture: "CULTURA",
-      positioning: "POSICIONAMENTO",
-      partnerships: "PARCERIAS",
-      plans: "PLANOS",
-      blog: "BLOG",
-      contactUs: "FALE CONOSCO",
+      getStarted: "Começar agora",
+      login: "Acessar",
+      register: "Cadastre-se",
+      learnMore: "Saiba mais",
+      about: "Quem somos",
+      culture: "Cultura",
+      positioning: "Posicionamento",
+      partnerships: "Parcerias",
+      plans: "Planos",
+      blog: "Blog",
+      contactUs: "Fale conosco",
       search: "Pesquise"
     },
     hero: {
@@ -124,7 +198,7 @@ export const translations = {
       annual: "Anual",
       acquire: "Adquirir",
       dopamina: {
-        name: "DOPAMINA",
+        name: "Dopamina",
         price: "Free",
         trial: "3 meses grátis",
         features: [
@@ -141,7 +215,7 @@ export const translations = {
         ]
       },
       oxitocina: {
-        name: "OXITOCINA",
+        name: "Oxitocina",
         price: "R$ 15,00",
         priceAnnual: "R$ 150,00",
         features: [
@@ -158,7 +232,7 @@ export const translations = {
         ]
       },
       seratonina: {
-        name: "SERATONINA",
+        name: "Seratonina",
         price: "R$ 35,00",
         priceAnnual: "R$ 350,00",
         features: [
@@ -175,7 +249,7 @@ export const translations = {
         ]
       },
       endorfina: {
-        name: "ENDORFINA",
+        name: "Endorfina",
         price: "R$ 100,00",
         priceAnnual: "R$ 1000,00",
         features: [
