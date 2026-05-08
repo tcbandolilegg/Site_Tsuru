@@ -5,14 +5,20 @@ export const translations = {
       login: "Access",
       register: "Register",
       learnMore: "Learn More",
-      about: "About Us",
+      about: "About",
       culture: "Culture",
       positioning: "Positioning",
       partnerships: "Partnerships",
+      solutions: "Solutions",
+      features: "Features",
+      family: "Family",
       plans: "Plans",
       blog: "Blog",
       contactUs: "Contact Us",
-      search: "Search"
+      search: "Search",
+      symbol: "The Symbol",
+      longevity: "Health & Longevity",
+      theTsuru: "The Tsuru"
     },
     contact: {
       title: "Contact Us",
@@ -174,14 +180,20 @@ export const translations = {
       login: "Acessar",
       register: "Cadastre-se",
       learnMore: "Saiba mais",
-      about: "Quem somos",
+      about: "Sobre",
       culture: "Cultura",
       positioning: "Posicionamento",
       partnerships: "Parcerias",
+      solutions: "Soluções",
+      features: "Recursos",
+      family: "Família",
       plans: "Planos",
       blog: "Blog",
       contactUs: "Fale conosco",
-      search: "Pesquise"
+      search: "Pesquise",
+      symbol: "O Símbolo",
+      longevity: "Saúde e Longevidade",
+      theTsuru: "O Tsuru"
     },
     hero: {
       badge: "Sua saúde na palma de suas mãos",
@@ -386,7 +398,8 @@ export const translations = {
       features: "Recursos",
       family: "Família",
       symbol: "O Símbolo",
-      longevity: "Saúde e Longevidade"
+      longevity: "Saúde e Longevidade",
+      theTsuru: "O Tsuru"
     },
     hero: {
       badge: "Sua saúde na palma de suas mãos",

@@ -46,6 +46,45 @@ export default function App() {
     window.scrollTo(0, 0);
   };
 
+  const scrollToFamily = () => {
+    if (view !== 'home') {
+      setView('home');
+      setTimeout(() => {
+        const element = document.getElementById('family');
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const element = document.getElementById('family');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToSolutions = () => {
+    if (view !== 'home') {
+      setView('home');
+      setTimeout(() => {
+        const element = document.getElementById('solutions');
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const element = document.getElementById('solutions');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToFeatures = () => {
+    if (view !== 'home') {
+      setView('home');
+      setTimeout(() => {
+        const element = document.getElementById('features');
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const element = document.getElementById('features');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <main className="min-h-screen">
       <Navbar 
@@ -53,6 +92,9 @@ export default function App() {
         onRegister={goToPlans}
         onAccess={handleAccess}
         onLogoClick={goToHome}
+        onFamilyClick={scrollToFamily}
+        onSolutionsClick={scrollToSolutions}
+        onFeaturesClick={scrollToFeatures}
       />
       
       {view === 'home' && (

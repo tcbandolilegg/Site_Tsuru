@@ -112,7 +112,7 @@ export default function Hero({ onRegister, onAccess }: { onRegister: () => void,
               <div className="bg-white/20 p-3 rounded-2xl">
                 <TsuruLogo className="w-10 h-10" />
               </div>
-              <h4 className="font-serif italic text-xl text-tsuru-blue">O Tsuru</h4>
+              <h4 className="font-serif italic text-xl text-tsuru-blue">{t('common.theTsuru')}</h4>
             </div>
             <p className="text-sm text-blue-100/80 leading-relaxed font-light italic">
               {t('hero.legend')}

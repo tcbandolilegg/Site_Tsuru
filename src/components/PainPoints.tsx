@@ -9,7 +9,7 @@ export default function PainPoints() {
   const items = t('painPoints.items', { returnObjects: true }) as Array<{title: string, description: string}>;
 
   return (
-    <section className="py-24 bg-tsuru-ink text-white">
+    <section id="solutions" className="py-24 bg-tsuru-ink text-white">
       <div className="max-w-7xl mx-auto px-6 text-center mb-16">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
