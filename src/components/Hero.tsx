@@ -18,7 +18,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           id="hero-content"
         >
-          <span className="inline-block px-4 py-1 rounded-full bg-tsuru-gold/10 text-tsuru-gold text-xs font-bold uppercase tracking-wider mb-6">
+          <span className="inline-block px-6 py-2 rounded-full bg-tsuru-gold text-tsuru-navy text-sm font-black uppercase tracking-[0.2em] mb-6 shadow-lg shadow-tsuru-gold/20">
             {t('hero.badge')}
           </span>
           <h1 className="text-6xl md:text-8xl font-serif leading-[0.9] text-tsuru-ink mb-8">
@@ -48,7 +48,7 @@ export default function Hero() {
           id="hero-logo-container"
         >
           {/* Light Blue Block Frame */}
-          <div className="absolute inset-0 bg-tsuru-blue/20 rounded-3xl -z-10 border border-tsuru-blue/30" />
+          <div className="absolute inset-0 bg-tsuru-blue/5 rounded-3xl -z-10 border border-tsuru-blue/10" />
           
           {/* Large Hero Logo - Occupying almost the entire frame */}
           <motion.div
@@ -70,7 +70,7 @@ export default function Hero() {
             className="absolute -bottom-10 -right-6 md:-right-12 bg-tsuru-navy text-white p-8 rounded-3xl shadow-2xl max-w-sm border border-white/10"
           >
             <div className="flex items-center gap-4 mb-4">
-              <div className="bg-white/10 p-3 rounded-2xl">
+              <div className="bg-white/20 p-3 rounded-2xl">
                 <TsuruLogo className="w-10 h-10" />
               </div>
               <h4 className="font-serif italic text-xl text-tsuru-blue">O Tsuru</h4>
