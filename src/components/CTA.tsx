@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-export default function CTA() {
+export default function CTA({ onOpenContact }: { onOpenContact: () => void }) {
   const { t } = useTranslation();
 
   return (
@@ -34,7 +34,10 @@ export default function CTA() {
             <button className="bg-white text-tsuru-navy px-12 py-5 rounded-full text-lg font-bold hover:bg-tsuru-blue hover:text-white transition-all shadow-2xl overflow-hidden relative group">
               <span className="relative z-10 font-bold uppercase tracking-widest text-sm">{t('cta.button')}</span>
             </button>
-            <button className="text-white border border-white/30 px-12 py-5 rounded-full text-lg font-medium hover:bg-white/10 transition-all uppercase tracking-widest text-sm">
+            <button 
+              onClick={onOpenContact}
+              className="text-white border border-white/30 px-12 py-5 rounded-full text-lg font-medium hover:bg-white/10 transition-all uppercase tracking-widest text-sm"
+            >
               {t('cta.contact')}
             </button>
           </div>

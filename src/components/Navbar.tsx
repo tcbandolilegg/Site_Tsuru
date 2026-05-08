@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
-import { Globe, ChevronDown } from "lucide-react";
+import { Globe, ChevronDown, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import TsuruLogo from "./TsuruLogo";
@@ -10,7 +10,7 @@ const languages = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
 ];
 
-export default function Navbar() {
+export default function Navbar({ onOpenContact }: { onOpenContact: () => void }) {
   const { t, i18n } = useTranslation();
   const [isLangOpen, setIsLangOpen] = useState(false);
 
@@ -38,9 +38,16 @@ export default function Navbar() {
           <a href="#about" className="hover:text-tsuru-blue transition-colors">{t('common.about')}</a>
           <a href="#features" className="hover:text-tsuru-blue transition-colors">{t('common.features')}</a>
           <a href="#family" className="hover:text-tsuru-blue transition-colors">{t('common.family')}</a>
+          <button 
+            onClick={onOpenContact}
+            className="hover:text-tsuru-blue transition-colors flex items-center gap-2"
+          >
+            <Mail className="w-4 h-4" />
+            {t('common.contactUs')}
+          </button>
         </div>
 
-        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4">
           {/* Language Selector */}
           <div className="relative">
             <button 

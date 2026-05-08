@@ -7,10 +7,28 @@ export const translations = {
       features: "Features",
       family: "Family",
       symbol: "The Symbol",
-      longevity: "Health & Longevity"
+      longevity: "Health & Longevity",
+      contactUs: "Contact us"
+    },
+    contact: {
+      title: "Contact Us",
+      subtitle: "We're here to help with whatever you need.",
+      name: "Full Name",
+      phone: "Phone / WhatsApp",
+      email: "Email",
+      situation: "Situation",
+      description: "Description",
+      send: "Send",
+      options: {
+        duvida: "Inquiry",
+        problema: "Problem",
+        denuncia: "Report",
+        sugestao: "Suggestions",
+        elogio: "Compliments"
+      }
     },
     hero: {
-      badge: "Your health in good hands",
+      badge: "Your health in your hands",
       title1: "Longevity and",
       title2: "Peace of Mind",
       description: "We are a platform focused on managing your medical history. Symbol of health and good luck, we bring Tsuru's wisdom to your life's care.",
@@ -80,10 +98,28 @@ export const translations = {
       features: "Recursos",
       family: "Família",
       symbol: "O Símbolo",
-      longevity: "Saúde e Longevidade"
+      longevity: "Saúde e Longevidade",
+      contactUs: "Fale conosco"
+    },
+    contact: {
+      title: "Fale Conosco",
+      subtitle: "Estamos aqui para ajudar você no que for preciso.",
+      name: "Nome Completo",
+      phone: "Telefone / WhatsApp",
+      email: "E-mail",
+      situation: "Situação",
+      description: "Descrição",
+      send: "Enviar",
+      options: {
+        duvida: "Dúvida",
+        problema: "Problema",
+        denuncia: "Denúncia",
+        sugestao: "Sugestões",
+        elogio: "Elogios"
+      }
     },
     hero: {
-      badge: "Sua saúde em boas mãos",
+      badge: "A sua saúde em suas mãos",
       title1: "Longevidade e",
       title2: "Tranquilidade",
       description: "Somos uma plataforma focada no gerenciamento do seu histórico médico. Símbolo da saúde e boa sorte, levamos a sabedoria do Tsuru para o cuidado da sua vida.",
@@ -156,7 +192,7 @@ export const translations = {
       longevity: "Saúde e Longevidade"
     },
     hero: {
-      badge: "A sua saúde em boas mãos",
+      badge: "A sua saúde em suas mãos",
       title1: "Longevidade e",
       title2: "Tranquilidade",
       description: "Somos uma plataforma focada na gestão do seu histórico médico. Símbolo de saúde e boa sorte, levamos a sabedoria do Tsuru para o cuidado da sua vida.",

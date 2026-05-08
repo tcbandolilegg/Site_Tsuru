@@ -2,7 +2,7 @@ import { Instagram, Twitter, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import TsuruLogo from "./TsuruLogo";
 
-export default function Footer() {
+export default function Footer({ onOpenContact }: { onOpenContact: () => void }) {
   const { t } = useTranslation();
 
   return (
@@ -42,6 +42,7 @@ export default function Footer() {
           <div>
             <h4 className="text-tsuru-blue font-bold uppercase tracking-widest text-xs mb-8">{t('footer.support')}</h4>
             <ul className="space-y-4 text-gray-400">
+              <li><button onClick={onOpenContact} className="hover:text-white transition-colors">{t('common.contactUs')}</button></li>
               <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Terms</a></li>
