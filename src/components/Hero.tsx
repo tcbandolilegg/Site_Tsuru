@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import TsuruLogo from "./TsuruLogo";
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -40,28 +41,56 @@ export default function Hero() {
         </motion.div>
         
         <motion.div
-          initial={{ opacity: 0, scale: 0.9, rotate: 5 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "circOut" }}
-          className="relative aspect-square md:aspect-auto md:h-[600px]"
-          id="hero-image-container"
+          className="relative aspect-square md:aspect-auto md:h-[600px] flex items-center justify-center"
+          id="hero-logo-container"
         >
-          <div className="absolute inset-0 bg-gradient-to-tr from-tsuru-blue/10 to-transparent rounded-3xl" />
-          <img 
-            src="https://images.unsplash.com/photo-1576091160550-217359f4ecf8?auto=format&fit=crop&q=80&w=1000" 
-            alt="Medical Management" 
-            className="w-full h-full object-cover rounded-3xl shadow-2xl grayscale-[0.2] sepia-[0.1]"
-            referrerPolicy="no-referrer"
-          />
+          {/* Light Blue Block Frame */}
+          <div className="absolute inset-0 bg-tsuru-blue/20 rounded-3xl -z-10 border border-tsuru-blue/30" />
           
-          {/* Symbol Overlay */}
+          {/* Large Hero Logo - Occupying almost the entire frame */}
+          <motion.div
+            animate={{ 
+              y: [0, -12, 0],
+              rotate: [-1, 1, -1]
+            }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="w-[92%] h-[92%] drop-shadow-[0_20px_50px_rgba(58,190,249,0.3)]"
+          >
+            <TsuruLogo className="w-full h-full opacity-100" />
+          </motion.div>
+          
+          {/* Blue Block with Legend (Already updated in previous step) */}
+          <motion.div 
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="absolute -bottom-10 -right-6 md:-right-12 bg-tsuru-navy text-white p-8 rounded-3xl shadow-2xl max-w-sm border border-white/10"
+          >
+            <div className="flex items-center gap-4 mb-4">
+              <div className="bg-white/10 p-3 rounded-2xl">
+                <TsuruLogo className="w-10 h-10" />
+              </div>
+              <h4 className="font-serif italic text-xl text-tsuru-blue">O Tsuru</h4>
+            </div>
+            <p className="text-sm text-blue-100/80 leading-relaxed font-light italic">
+              {t('hero.legend')}
+            </p>
+          </motion.div>
+          
+          {/* Floating Symbol Overlay */}
           <motion.div 
             animate={{ y: [0, -20, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-10 -left-10 bg-white p-8 rounded-2xl shadow-xl border border-tsuru-gold/20"
+            className="absolute -top-10 -left-10 bg-white p-8 rounded-2xl shadow-xl border border-tsuru-blue/10 flex items-center gap-6 hidden lg:flex"
           >
-            <div className="text-tsuru-gold text-sm font-bold uppercase tracking-tighter mb-1">{t('common.symbol')}</div>
-            <div className="font-serif italic text-xl text-tsuru-blue">{t('common.longevity')}</div>
+            <TsuruLogo className="w-12 h-12" />
+            <div>
+              <div className="text-tsuru-blue text-sm font-bold uppercase tracking-tighter mb-1">{t('common.symbol')}</div>
+              <div className="font-serif italic text-xl text-tsuru-navy">{t('common.longevity')}</div>
+            </div>
           </motion.div>
         </motion.div>
       </div>

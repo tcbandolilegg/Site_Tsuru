@@ -14,7 +14,8 @@ export const translations = {
       title1: "Longevity and",
       title2: "Peace of Mind",
       description: "We are a platform focused on managing your medical history. Symbol of health and good luck, we bring Tsuru's wisdom to your life's care.",
-      cta: "Manage my history"
+      cta: "Manage my history",
+      legend: "Tsuru is a sacred bird of Japan. It is the symbol of health, good luck, happiness, longevity, and fortune. Japanese legend says the tsuru can live for a thousand years."
     },
     painPoints: {
       title: "No more stress with your data",
@@ -86,7 +87,8 @@ export const translations = {
       title1: "Longevidade e",
       title2: "Tranquilidade",
       description: "Somos uma plataforma focada no gerenciamento do seu histórico médico. Símbolo da saúde e boa sorte, levamos a sabedoria do Tsuru para o cuidado da sua vida.",
-      cta: "Gerenciar meu histórico"
+      cta: "Gerenciar meu histórico",
+      legend: "Tsuru é uma ave sagrada do Japão. É o símbolo da saúde, da boa sorte, felicidade, longevidade e da fortuna. Conta a lenda japonesa que o tsuru pode viver até mil anos."
     },
     painPoints: {
       title: "Chega de estresse com seus dados",
@@ -158,7 +160,8 @@ export const translations = {
       title1: "Longevidade e",
       title2: "Tranquilidade",
       description: "Somos uma plataforma focada na gestão do seu histórico médico. Símbolo de saúde e boa sorte, levamos a sabedoria do Tsuru para o cuidado da sua vida.",
-      cta: "Gerir o meu histórico"
+      cta: "Gerir o meu histórico",
+      legend: "Tsuru é uma ave sagrada do Japão. É o símbolo da saúde, da boa sorte, felicidade, longevidade e da fortuna. Conta a lenda japonesa que o tsuru pode viver até mil anos."
     },
     painPoints: {
       title: "Acabe com o stress com os seus dados",
