@@ -10,9 +10,20 @@ const languages = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
 ];
 
-export default function Navbar({ onOpenContact }: { onOpenContact: () => void }) {
+export default function Navbar({ 
+  onOpenContact, 
+  onRegister, 
+  onAccess, 
+  onLogoClick 
+}: { 
+  onOpenContact: () => void, 
+  onRegister: () => void, 
+  onAccess: () => void, 
+  onLogoClick: () => void 
+}) {
   const { t, i18n } = useTranslation();
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const [isGetStartedOpen, setIsGetStartedOpen] = useState(false);
 
   const changeLanguage = (code: string) => {
     i18n.changeLanguage(code);
@@ -27,37 +38,40 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-3"
+          className="flex items-center gap-3 cursor-pointer group"
+          onClick={onLogoClick}
           id="nav-logo"
         >
-          <TsuruLogo className="w-10 h-10" />
+          <TsuruLogo className="w-10 h-10 group-hover:scale-110 transition-transform" />
           <span className="text-2xl font-serif font-bold tracking-tight text-tsuru-blue">Tsuru</span>
         </motion.div>
         
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest text-tsuru-muted">
-          <a href="#about" className="hover:text-tsuru-blue transition-colors">{t('common.about')}</a>
-          <a href="#features" className="hover:text-tsuru-blue transition-colors">{t('common.features')}</a>
-          <a href="#family" className="hover:text-tsuru-blue transition-colors">{t('common.family')}</a>
-          <button 
-            onClick={onOpenContact}
-            className="hover:text-tsuru-blue transition-colors flex items-center gap-2"
-          >
-            <Mail className="w-4 h-4" />
-            {t('common.contactUs')}
-          </button>
+        <div className="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-tsuru-navy">
+          <button onClick={onLogoClick} className="hover:text-tsuru-blue transition-colors">{t('common.about')}</button>
+          <button onClick={onLogoClick} className="hover:text-tsuru-blue transition-colors">{t('common.culture')}</button>
+          <button onClick={onLogoClick} className="hover:text-tsuru-blue transition-colors">{t('common.positioning')}</button>
+          <button onClick={onLogoClick} className="hover:text-tsuru-blue transition-colors">{t('common.partnerships')}</button>
+          <button onClick={onRegister} className="hover:text-tsuru-blue transition-colors">{t('common.plans')}</button>
+          <button onClick={onLogoClick} className="hover:text-tsuru-blue transition-colors">{t('common.blog')}</button>
+          <button onClick={onOpenContact} className="hover:text-tsuru-blue transition-colors">{t('common.contactUs')}</button>
         </div>
 
-          <div className="flex items-center gap-4">
-          {/* Language Selector */}
+        <div className="flex items-center gap-4">
+          <div className="hidden xl:block relative group">
+            <input 
+              type="text" 
+              placeholder={t('common.search')}
+              className="bg-tsuru-blue/5 border border-tsuru-blue/10 rounded-lg px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-tsuru-blue/20 transition-all w-32 focus:w-48"
+            />
+          </div>
+
           <div className="relative">
             <button 
               onClick={() => setIsLangOpen(!isLangOpen)}
-              className="flex items-center gap-2 text-tsuru-blue hover:bg-tsuru-blue/5 px-3 py-2 rounded-lg transition-all text-sm font-medium"
+              className="flex items-center gap-1.5 text-tsuru-blue hover:bg-tsuru-blue/5 px-2 py-2 rounded-lg transition-all text-xl"
               id="lang-selector-btn"
             >
-              <Globe className="w-4 h-4" />
-              <span className="hidden sm:inline">{currentLang.name}</span>
-              <span className="sm:hidden">{currentLang.flag}</span>
+              <span>{currentLang.flag}</span>
               <ChevronDown className={`w-3 h-3 transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
             </button>
 
@@ -67,16 +81,15 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
-                  className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-2xl border border-tsuru-blue/10 overflow-hidden"
+                  className="absolute right-0 mt-2 w-16 bg-white rounded-xl shadow-2xl border border-tsuru-blue/10 overflow-hidden py-1"
                 >
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
                       onClick={() => changeLanguage(lang.code)}
-                      className={`w-full flex items-center gap-3 px-4 py-3 text-sm text-left hover:bg-tsuru-blue/5 transition-colors ${i18n.language === lang.code ? 'text-tsuru-blue font-bold bg-tsuru-blue/5' : 'text-tsuru-muted'}`}
+                      className={`w-full flex items-center justify-center p-3 text-xl hover:bg-tsuru-blue/5 transition-colors ${i18n.language === lang.code ? 'bg-tsuru-blue/5' : ''}`}
                     >
-                      <span className="text-base">{lang.flag}</span>
-                      {lang.name}
+                      {lang.flag}
                     </button>
                   ))}
                 </motion.div>
@@ -84,14 +97,48 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
             </AnimatePresence>
           </div>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-tsuru-blue text-white px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide hover:shadow-lg hover:shadow-tsuru-blue/20 transition-all whitespace-nowrap"
-            id="nav-cta"
-          >
-            {t('common.getStarted')}
-          </motion.button>
+          <div className="relative">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setIsGetStartedOpen(!isGetStartedOpen)}
+              className="bg-tsuru-blue text-white px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide hover:shadow-lg hover:shadow-tsuru-blue/20 transition-all whitespace-nowrap flex items-center gap-2"
+              id="nav-cta"
+            >
+              {t('common.getStarted')}
+              <ChevronDown className={`w-4 h-4 transition-transform ${isGetStartedOpen ? 'rotate-180' : ''}`} />
+            </motion.button>
+
+            <AnimatePresence>
+              {isGetStartedOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-2xl border border-tsuru-blue/10 overflow-hidden py-2"
+                >
+                  <button
+                    onClick={() => {
+                      onRegister();
+                      setIsGetStartedOpen(false);
+                    }}
+                    className="w-full text-left px-4 py-2 text-sm text-tsuru-navy hover:bg-tsuru-blue/5 transition-colors font-medium rounded-lg"
+                  >
+                    {t('common.register')}
+                  </button>
+                  <button
+                    onClick={() => {
+                      onAccess();
+                      setIsGetStartedOpen(false);
+                    }}
+                    className="w-full text-left px-4 py-2 text-sm text-tsuru-navy hover:bg-tsuru-blue/5 transition-colors font-medium rounded-lg"
+                  >
+                    {t('common.login')}
+                  </button>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </nav>

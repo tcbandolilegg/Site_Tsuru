@@ -2,7 +2,7 @@ import { Instagram, Twitter, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import TsuruLogo from "./TsuruLogo";
 
-export default function Footer({ onOpenContact }: { onOpenContact: () => void }) {
+export default function Footer({ onOpenContact, onLogoClick }: { onOpenContact: () => void, onLogoClick: () => void }) {
   const { t } = useTranslation();
 
   return (
@@ -10,8 +10,11 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-2">
-            <div className="flex items-center gap-2 mb-8">
-              <TsuruLogo className="w-12 h-12" />
+            <div 
+              className="flex items-center gap-2 mb-8 cursor-pointer group"
+              onClick={onLogoClick}
+            >
+              <TsuruLogo className="w-12 h-12 group-hover:scale-110 transition-transform" />
               <span className="text-3xl font-serif font-bold tracking-tight text-tsuru-blue">Tsuru</span>
             </div>
             <p className="text-gray-400 max-w-sm text-lg leading-relaxed mb-8">

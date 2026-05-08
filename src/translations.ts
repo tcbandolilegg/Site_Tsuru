@@ -2,13 +2,17 @@ export const translations = {
   en: {
     common: {
       getStarted: "Get Started",
+      login: "Access",
+      register: "Register",
       learnMore: "Learn More",
-      about: "About",
-      features: "Features",
-      family: "Family",
-      symbol: "The Symbol",
-      longevity: "Health & Longevity",
-      contactUs: "Contact us"
+      about: "ABOUT US",
+      culture: "CULTURE",
+      positioning: "POSITIONING",
+      partnerships: "PARTNERSHIPS",
+      plans: "PLANS",
+      blog: "BLOG",
+      contactUs: "CONTACT US",
+      search: "Search"
     },
     contact: {
       title: "Contact Us",
@@ -28,7 +32,7 @@ export const translations = {
       }
     },
     hero: {
-      badge: "Your health in your hands",
+      badge: "Your health in the palm of your hands",
       title1: "Longevity and",
       title2: "Peace of Mind",
       description: "We are a platform focused on managing your medical history. Symbol of health and good luck, we bring Tsuru's wisdom to your life's care.",
@@ -92,39 +96,156 @@ export const translations = {
   },
   "pt-BR": {
     common: {
-      getStarted: "Começar agora",
-      learnMore: "Saiba mais",
-      about: "Sobre",
-      features: "Recursos",
-      family: "Família",
-      symbol: "O Símbolo",
-      longevity: "Saúde e Longevidade",
-      contactUs: "Fale conosco"
-    },
-    contact: {
-      title: "Fale Conosco",
-      subtitle: "Estamos aqui para ajudar você no que for preciso.",
-      name: "Nome Completo",
-      phone: "Telefone / WhatsApp",
-      email: "E-mail",
-      situation: "Situação",
-      description: "Descrição",
-      send: "Enviar",
-      options: {
-        duvida: "Dúvida",
-        problema: "Problema",
-        denuncia: "Denúncia",
-        sugestao: "Sugestões",
-        elogio: "Elogios"
-      }
+      getStarted: "COMEÇAR AGORA",
+      login: "ACESSAR",
+      register: "CADASTRE-SE",
+      learnMore: "SAIBA MAIS",
+      about: "QUEM SOMOS",
+      culture: "CULTURA",
+      positioning: "POSICIONAMENTO",
+      partnerships: "PARCERIAS",
+      plans: "PLANOS",
+      blog: "BLOG",
+      contactUs: "FALE CONOSCO",
+      search: "Pesquise"
     },
     hero: {
-      badge: "A sua saúde em suas mãos",
+      badge: "Sua saúde na palma de suas mãos",
       title1: "Longevidade e",
       title2: "Tranquilidade",
       description: "Somos uma plataforma focada no gerenciamento do seu histórico médico. Símbolo da saúde e boa sorte, levamos a sabedoria do Tsuru para o cuidado da sua vida.",
       cta: "Gerenciar meu histórico",
       legend: "Tsuru é uma ave sagrada do Japão. É o símbolo da saúde, da boa sorte, felicidade, longevidade e da fortuna. Conta a lenda japonesa que o tsuru pode viver até mil anos."
+    },
+    plans: {
+      title: "Escolha seu Plano",
+      subtitle: "Selecione a melhor opção para cuidar da sua saúde com tranquilidade.",
+      monthly: "Por mês",
+      annual: "Anual",
+      acquire: "Adquirir",
+      dopamina: {
+        name: "DOPAMINA",
+        price: "Free",
+        trial: "3 meses grátis",
+        features: [
+          "Acesso a lista de profissionais e instituições",
+          "Agendamento de consultas ou exames - até 5",
+          "Alerta de medicamento de uso contínuo - apenas 1",
+          "Exame laboratorial de análises clínicas - apenas 1",
+          "Exames laboratoriais de análises patológicas - apenas 1",
+          "Portfólio médico"
+        ],
+        disabled: [
+          "Registros em vídeo exames",
+          "Registro de vídeo cirurgias"
+        ]
+      },
+      oxitocina: {
+        name: "OXITOCINA",
+        price: "R$ 15,00",
+        priceAnnual: "R$ 150,00",
+        features: [
+          "Acesso a lista de profissionais e instituições",
+          "Agendamento de consultas ou exames - até 15",
+          "Alerta de medicamento de uso contínuo - até 7",
+          "Exame laboratorial de análises clínicas - até 3",
+          "Exames laboratoriais de análises patológicas - até 3",
+          "Portfólio médico",
+          "Registros em vídeo exames - apenas 1"
+        ],
+        disabled: [
+          "Registro de vídeo cirurgias"
+        ]
+      },
+      seratonina: {
+        name: "SERATONINA",
+        price: "R$ 35,00",
+        priceAnnual: "R$ 350,00",
+        features: [
+          "Acesso a lista de profissionais e instituições",
+          "Agendamento de consultas ou exames - até 30",
+          "Alerta de medicamento de uso contínuo - até 15",
+          "Exame laboratorial de análises clínicas - até 4",
+          "Exames laboratoriais de análises patológicas - até 5",
+          "Portfólio médico",
+          "Registros em vídeo exames - até 3"
+        ],
+        disabled: [
+          "Registro de vídeo cirurgias"
+        ]
+      },
+      endorfina: {
+        name: "ENDORFINA",
+        price: "R$ 100,00",
+        priceAnnual: "R$ 1000,00",
+        features: [
+          "Acesso a lista de profissionais e instituições",
+          "Agendamento de consultas ou exames - ilimitado",
+          "Alerta de medicamento de uso contínuo - ilimitado",
+          "Exame laboratorial de análises clínicas - até 12",
+          "Exames laboratoriais de análises patológicas - até 12",
+          "Portfólio médico",
+          "Registros em vídeo exames - até 5",
+          "Registro de vídeo cirurgias - apenas 1"
+        ],
+        disabled: []
+      }
+    },
+    registration: {
+      title: "Cadastre-se",
+      subtitle: "Preencha seus dados para começar sua jornada com o Tsuru.",
+      personalInfo: "Informações Pessoais",
+      addressInfo: "Endereço",
+      documents: "Documentação",
+      photo: "Foto de Perfil",
+      fullName: "Nome Completo",
+      socialName: "Nome Social",
+      race: "Raça",
+      gender: "Gênero",
+      cep: "CEP",
+      address: "Endereço",
+      number: "Número",
+      complement: "Complemento",
+      neighborhood: "Bairro",
+      city: "Cidade",
+      state: "Estado",
+      cpf: "CPF",
+      rg: "RG",
+      documentPhoto: "Foto do CPF ou CNH",
+      birthDate: "Data de Nascimento",
+      motherName: "Nome da Mãe",
+      selectedPlan: "Plano Selecionado",
+      billingCycle: "Ciclo de Faturamento",
+      planValidity: "Validade do Plano",
+      mensal: "Mensal",
+      anual: "Anual",
+      submit: "Concluir Cadastro",
+      races: {
+        branca: "Branca",
+        preta: "Preta",
+        parda: "Parda",
+        amarela: "Amarela",
+        indigena: "Indígena",
+        quilombola: "Quilombola",
+        none: "Prefiro não informar"
+      },
+      genders: {
+        homem: "Homem",
+        mulher: "Mulher",
+        homemTrans: "Homem trans",
+        mulherTrans: "Mulher trans",
+        cis: "Cisgênero",
+        trans: "Transgênero",
+        nb: "Não binário",
+        fluido: "Gênero fluido",
+        agenero: "Agênero",
+        bigenero: "Bigênero",
+        pangenero: "Pangênero",
+        demigenero: "Demigênero",
+        queer: "Queer",
+        intergenero: "Intergênero",
+        none: "Prefiro não informar"
+      }
     },
     painPoints: {
       title: "Chega de estresse com seus dados",
@@ -184,6 +305,8 @@ export const translations = {
   "pt-PT": {
     common: {
       getStarted: "Começar agora",
+      login: "Aceder",
+      register: "Registar-se",
       learnMore: "Saiba mais",
       about: "Sobre",
       features: "Recursos",
@@ -192,7 +315,7 @@ export const translations = {
       longevity: "Saúde e Longevidade"
     },
     hero: {
-      badge: "A sua saúde em suas mãos",
+      badge: "Sua saúde na palma de suas mãos",
       title1: "Longevidade e",
       title2: "Tranquilidade",
       description: "Somos uma plataforma focada na gestão do seu histórico médico. Símbolo de saúde e boa sorte, levamos a sabedoria do Tsuru para o cuidado da sua vida.",

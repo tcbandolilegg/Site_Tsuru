@@ -1,10 +1,12 @@
-import { motion } from "motion/react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import TsuruLogo from "./TsuruLogo";
 
-export default function Hero() {
+export default function Hero({ onRegister, onAccess }: { onRegister: () => void, onAccess: () => void }) {
   const { t } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section id="about" className="relative min-h-screen pt-32 flex items-center overflow-hidden">
@@ -29,11 +31,48 @@ export default function Hero() {
             {t('hero.description')}
           </p>
           
-          <div className="flex flex-wrap gap-4">
-            <button className="bg-tsuru-blue text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 group hover:bg-tsuru-blue/90 transition-all shadow-xl shadow-tsuru-blue/20">
-              {t('hero.cta')}
-              <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+          <div className="flex flex-wrap gap-4 relative">
+            <div className="relative">
+              <button 
+                onClick={() => setIsOpen(!isOpen)}
+                className="bg-tsuru-blue text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 group hover:bg-tsuru-blue/90 transition-all shadow-xl shadow-tsuru-blue/20"
+              >
+                {t('common.getStarted')}
+                <ChevronRight className={`w-5 h-5 transition-transform ${isOpen ? 'rotate-90' : 'group-hover:translate-x-1'}`} />
+              </button>
+
+              <AnimatePresence>
+                {isOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.95, y: 10 }}
+                    className="absolute left-0 mt-4 w-60 bg-white rounded-3xl shadow-2xl border border-tsuru-blue/10 overflow-hidden py-3 z-30"
+                  >
+                    <button
+                      onClick={() => {
+                        onRegister();
+                        setIsOpen(false);
+                      }}
+                      className="w-full text-left px-6 py-3 text-tsuru-navy hover:bg-tsuru-blue/5 transition-colors font-bold uppercase tracking-widest text-xs"
+                    >
+                      {t('common.register')}
+                    </button>
+                    <div className="h-px bg-tsuru-blue/5 mx-4 my-1" />
+                    <button
+                      onClick={() => {
+                        onAccess();
+                        setIsOpen(false);
+                      }}
+                      className="w-full text-left px-6 py-3 text-tsuru-navy hover:bg-tsuru-blue/5 transition-colors font-bold uppercase tracking-widest text-xs"
+                    >
+                      {t('common.login')}
+                    </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+            
             <button className="border border-tsuru-blue/20 text-tsuru-blue px-8 py-4 rounded-full font-semibold hover:bg-tsuru-blue/5 transition-all">
               {t('common.learnMore')}
             </button>
