@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { Globe, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import TsuruLogo from "./TsuruLogo";
 
 const languages = [
   { code: 'pt-BR', name: 'Português (BR)', flag: '🇧🇷' },
@@ -26,10 +27,10 @@ export default function Navbar() {
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-2"
+          className="flex items-center gap-3"
           id="nav-logo"
         >
-          <img src="/logo.png" alt="Tsuru Logo" className="w-12 h-12 object-contain" />
+          <TsuruLogo className="w-10 h-10" />
           <span className="text-2xl font-serif font-bold tracking-tight text-tsuru-blue">Tsuru</span>
         </motion.div>
         

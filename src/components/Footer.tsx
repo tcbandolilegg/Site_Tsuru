@@ -1,5 +1,6 @@
-import { Bird, Instagram, Twitter, Mail } from "lucide-react";
+import { Instagram, Twitter, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import TsuruLogo from "./TsuruLogo";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -10,7 +11,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-2">
             <div className="flex items-center gap-2 mb-8">
-              <img src="/logo.png" alt="Tsuru Logo" className="w-12 h-12 object-contain" />
+              <TsuruLogo className="w-12 h-12" />
               <span className="text-3xl font-serif font-bold tracking-tight text-tsuru-blue">Tsuru</span>
             </div>
             <p className="text-gray-400 max-w-sm text-lg leading-relaxed mb-8">
