@@ -59,15 +59,14 @@ export default function Hero({ onRegister, onAccess, onLearnMore }: { onRegister
                       {t('common.register')}
                     </button>
                     <div className="h-px bg-tsuru-blue/5 mx-4 my-1" />
-                    <button
-                      onClick={() => {
-                        onAccess();
-                        setIsOpen(false);
-                      }}
-                      className="w-full text-left px-6 py-3 text-tsuru-navy hover:bg-tsuru-blue/5 transition-colors font-bold tracking-wide text-xs"
+                    <a
+                      href="https://www.tsuru.app.br"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full text-left px-6 py-3 text-tsuru-navy hover:bg-tsuru-blue/5 transition-colors font-bold tracking-wide text-xs block"
                     >
                       {t('common.login')}
-                    </button>
+                    </a>
                   </motion.div>
                 )}
               </AnimatePresence>

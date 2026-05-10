@@ -52,7 +52,7 @@ export default function Features() {
           >
             <div className="absolute inset-0 bg-tsuru-gold/20 blur-[100px] -z-10" />
             <div className="bg-white p-8 rounded-3xl shadow-2xl border border-tsuru-blue/10">
-              <div className="min-h-72 bg-tsuru-blue/5 rounded-2xl flex items-center justify-center p-10 text-center text-tsuru-navy font-serif italic text-3xl font-medium tracking-tight leading-snug">
+              <div className="min-h-72 bg-[#c2e9f9] rounded-2xl flex items-center justify-center p-10 text-center text-tsuru-navy font-serif italic text-3xl font-medium tracking-tight leading-snug">
                 "{t('features.quote')}"
               </div>
               <div className="mt-6 flex flex-col gap-3">

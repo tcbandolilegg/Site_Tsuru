@@ -31,12 +31,14 @@ export default function CTA({ onOpenContact, onRegister, onAccess }: { onOpenCon
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-            <button 
-              onClick={onRegister}
-              className="bg-white text-tsuru-navy px-12 py-5 rounded-full text-lg font-bold hover:bg-tsuru-blue hover:text-white transition-all shadow-2xl overflow-hidden relative group"
+            <a 
+              href="https://www.tsuru.app.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-tsuru-navy px-12 py-5 rounded-full text-lg font-bold hover:bg-tsuru-blue hover:text-white transition-all shadow-2xl overflow-hidden relative group block"
             >
               <span className="relative z-10 font-bold tracking-wide text-sm">{t('cta.button')}</span>
-            </button>
+            </a>
             
             <button 
               onClick={onOpenContact}

@@ -77,16 +77,18 @@ function PlanCard({ name, price, priceAnnual, trial, features, disabled, onSelec
         </ul>
       </div>
 
-      <button 
-        onClick={onSelect}
-        className={`w-full py-5 rounded-2xl font-bold tracking-wide text-sm transition-all shadow-lg active:scale-95 ${
+      <a 
+        href="https://www.tsuru.app.br"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`w-full py-5 rounded-2xl font-bold tracking-wide text-sm transition-all shadow-lg active:scale-95 text-center block ${
           isPopular 
             ? 'bg-tsuru-blue text-white hover:bg-tsuru-navy shadow-tsuru-blue/20' 
             : 'bg-tsuru-navy text-white hover:bg-tsuru-blue shadow-tsuru-navy/20'
         }`}
       >
         {t('plans.acquire')}
-      </button>
+      </a>
     </motion.div>
   );
 }
