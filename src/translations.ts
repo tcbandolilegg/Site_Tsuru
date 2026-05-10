@@ -425,19 +425,21 @@ export const translations = {
       symbolLongevity: "Símbolo da Longevidade"
     },
     contact: {
-      title: "Recolha de Informação",
-      subtitle: "Estamos aqui para ajudar com o que for necessário.",
+      title: "Cuidado e Atenção",
+      subtitle: "Estamos prontos para ouvir você e oferecer o melhor suporte médico digital.",
+      concierge: "Suporte Concierge",
+      conciergeText: "Nossa equipe dedicada está pronta para garantir que sua experiência com o Tsuru seja excepcional.",
       name: "Nome Completo",
-      phone: "Telefone / WhatsApp",
-      email: "E-mail",
-      situation: "Situação",
-      description: "Descrição",
-      send: "Enviar",
+      phone: "WhatsApp ou Telefone",
+      email: "E-mail para Resposta",
+      situation: "Assunto do Contato",
+      description: "Conte-nos mais sobre sua necessidade",
+      send: "Enviar Mensagem Agora",
       options: {
-        duvida: "Dúvida",
-        problema: "Problema",
-        denuncia: "Denúncia",
-        sugestao: "Sugestão",
+        duvida: "Dúvida Geral",
+        problema: "Relatar Problema",
+        denuncia: "Canal Ético / Denúncia",
+        sugestao: "Sugestão de Melhoria",
         elogio: "Elogio"
       }
     }
