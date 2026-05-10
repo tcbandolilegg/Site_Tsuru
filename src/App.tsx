@@ -16,7 +16,7 @@ import ContactModal from "./components/ContactModal";
 
 export default function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
-  const [view, setView] = useState<'home' | 'plans' | 'registration'>('home');
+  const [view, setView] = useState<'home'>('home');
 
   const goToPlans = () => {
     const element = document.getElementById('plans');
@@ -29,10 +29,6 @@ export default function App() {
         el?.scrollIntoView({ behavior: 'smooth' });
       }, 100);
     }
-  };
-
-  const handleAccess = () => {
-    window.open('https://www.tsuru.app.br', '_blank', 'noopener,noreferrer');
   };
 
   const goToHome = () => {
