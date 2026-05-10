@@ -1,14 +1,12 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import { Sparkles, ChevronDown } from "lucide-react";
+import { motion } from "motion/react";
+import { Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export default function CTA({ onOpenContact, onRegister, onAccess }: { onOpenContact: () => void, onRegister: () => void, onAccess: () => void }) {
   const { t } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section id="cta" className="py-32 relative overflow-hidden">
       <div className="absolute inset-0 bg-tsuru-navy -z-20" />
       <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] -z-10" />
       
@@ -33,45 +31,12 @@ export default function CTA({ onOpenContact, onRegister, onAccess }: { onOpenCon
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-            <div className="relative">
-              <button 
-                onClick={() => setIsOpen(!isOpen)}
-                className="bg-white text-tsuru-navy px-12 py-5 rounded-full text-lg font-bold hover:bg-tsuru-blue hover:text-white transition-all shadow-2xl overflow-hidden relative group flex items-center gap-2"
-              >
-                <span className="relative z-10 font-bold tracking-wide text-sm">{t('common.getStarted')}</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
-              </button>
-
-              <AnimatePresence>
-                {isOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute left-1/2 -translate-x-1/2 mt-4 w-48 bg-white rounded-2xl shadow-2xl border border-tsuru-blue/10 overflow-hidden py-2 z-30"
-                  >
-                    <button
-                      onClick={() => {
-                        onRegister();
-                        setIsOpen(false);
-                      }}
-                      className="w-full text-left px-4 py-2 text-sm text-tsuru-navy hover:bg-tsuru-blue/5 transition-colors font-bold tracking-wide text-xs"
-                    >
-                      {t('common.register')}
-                    </button>
-                    <button
-                      onClick={() => {
-                        onAccess();
-                        setIsOpen(false);
-                      }}
-                      className="w-full text-left px-4 py-2 text-sm text-tsuru-navy hover:bg-tsuru-blue/5 transition-colors font-bold tracking-wide text-xs"
-                    >
-                      {t('common.login')}
-                    </button>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+            <button 
+              onClick={onRegister}
+              className="bg-white text-tsuru-navy px-12 py-5 rounded-full text-lg font-bold hover:bg-tsuru-blue hover:text-white transition-all shadow-2xl overflow-hidden relative group"
+            >
+              <span className="relative z-10 font-bold tracking-wide text-sm">{t('cta.button')}</span>
+            </button>
             
             <button 
               onClick={onOpenContact}

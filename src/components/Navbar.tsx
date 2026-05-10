@@ -17,7 +17,8 @@ export default function Navbar({
   onLogoClick,
   onFamilyClick,
   onSolutionsClick,
-  onFeaturesClick
+  onFeaturesClick,
+  onCTAClick
 }: { 
   onOpenContact: () => void, 
   onRegister: () => void, 
@@ -25,7 +26,8 @@ export default function Navbar({
   onLogoClick: () => void,
   onFamilyClick: () => void,
   onSolutionsClick: () => void,
-  onFeaturesClick: () => void
+  onFeaturesClick: () => void,
+  onCTAClick: () => void
 }) {
   const { t, i18n } = useTranslation();
   const [isLangOpen, setIsLangOpen] = useState(false);
@@ -63,7 +65,7 @@ export default function Navbar({
           <span className="text-4xl font-serif font-bold tracking-tight text-tsuru-blue">Tsuru</span>
         </motion.div>
         
-        <div className="hidden lg:flex items-center gap-10 text-lg font-bold tracking-widest text-tsuru-navy">
+        <div className="hidden lg:flex items-center gap-10 text-sm font-bold tracking-widest text-tsuru-navy">
           <button onClick={onLogoClick} className="nav-link">{t('common.about')}</button>
           <button onClick={onSolutionsClick} className="nav-link">{t('common.solutions')}</button>
           <button onClick={onFeaturesClick} className="nav-link">{t('common.features')}</button>
@@ -78,7 +80,7 @@ export default function Navbar({
             <input 
               type="text" 
               placeholder={t('common.search')}
-              className="bg-tsuru-blue/5 border border-tsuru-blue/10 rounded-full pl-10 pr-4 py-2 text-lg outline-none focus:ring-2 focus:ring-tsuru-blue/20 transition-all w-48 focus:w-64"
+              className="bg-tsuru-blue/5 border border-tsuru-blue/10 rounded-full pl-10 pr-4 py-2 text-sm outline-none focus:ring-2 focus:ring-tsuru-blue/20 transition-all w-48 focus:w-64"
             />
           </div>
 
@@ -105,7 +107,7 @@ export default function Navbar({
                     <button
                       key={lang.code}
                       onClick={() => changeLanguage(lang.code)}
-                      className={`w-full flex items-center gap-3 px-4 py-3 text-xl hover:bg-tsuru-blue/5 transition-colors ${i18n.language === lang.code ? 'bg-tsuru-blue/5 text-tsuru-blue font-bold' : 'text-tsuru-navy'}`}
+                      className={`w-full flex items-center gap-3 px-4 py-3 text-sm hover:bg-tsuru-blue/5 transition-colors ${i18n.language === lang.code ? 'bg-tsuru-blue/5 text-tsuru-blue font-bold' : 'text-tsuru-navy'}`}
                     >
                       <span className="text-xl">{lang.flag}</span>
                       <span>{lang.name}</span>
@@ -120,8 +122,8 @@ export default function Navbar({
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              onClick={onRegister}
-              className="relative bg-tsuru-navy text-white px-8 py-3 rounded-full text-xl font-bold tracking-widest hover:bg-tsuru-blue transition-colors duration-300 shadow-xl shadow-tsuru-navy/10 overflow-hidden group flex items-center gap-2"
+              onClick={onCTAClick}
+              className="relative bg-tsuru-navy text-white px-8 py-3 rounded-full text-sm font-bold tracking-wider hover:bg-tsuru-blue transition-colors duration-300 shadow-xl shadow-tsuru-navy/10 overflow-hidden group flex items-center gap-2 whitespace-nowrap"
               id="nav-cta"
             >
               <span className="relative z-10">{t('common.getStarted')}</span>

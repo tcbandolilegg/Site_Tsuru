@@ -4,12 +4,12 @@ import { ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import TsuruLogo from "./TsuruLogo";
 
-export default function Hero({ onRegister, onAccess }: { onRegister: () => void, onAccess: () => void }) {
+export default function Hero({ onRegister, onAccess, onLearnMore }: { onRegister: () => void, onAccess: () => void, onLearnMore?: () => void }) {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section id="about" className="relative min-h-screen pt-32 flex items-center overflow-hidden">
+    <section id="about" className="relative min-h-screen pt-32 pb-32 flex items-center z-10">
       {/* Background Decorative Element */}
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-tsuru-blue/5 rounded-full blur-3xl -z-10" />
       
@@ -73,7 +73,10 @@ export default function Hero({ onRegister, onAccess }: { onRegister: () => void,
               </AnimatePresence>
             </div>
             
-            <button className="border border-tsuru-blue/20 text-tsuru-blue px-8 py-4 rounded-full font-semibold hover:bg-tsuru-blue/5 transition-all">
+            <button 
+              onClick={onLearnMore}
+              className="border border-tsuru-blue/20 text-tsuru-blue px-8 py-4 rounded-full font-semibold hover:bg-tsuru-blue/5 transition-all"
+            >
               {t('common.learnMore')}
             </button>
           </div>
@@ -106,7 +109,7 @@ export default function Hero({ onRegister, onAccess }: { onRegister: () => void,
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="absolute -bottom-10 -right-6 md:-right-12 bg-tsuru-navy text-white p-8 rounded-3xl shadow-2xl max-w-sm border border-white/10"
+            className="absolute bottom-12 -right-6 md:-right-12 bg-tsuru-navy text-white p-8 rounded-3xl shadow-2xl max-w-sm border border-white/10 z-20"
           >
             <div className="flex items-center gap-4 mb-4">
               <div className="bg-white/20 p-3 rounded-2xl">

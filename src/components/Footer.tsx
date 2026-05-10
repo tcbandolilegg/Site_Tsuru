@@ -2,7 +2,21 @@ import { Instagram, Twitter, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import TsuruLogo from "./TsuruLogo";
 
-export default function Footer({ onOpenContact, onLogoClick }: { onOpenContact: () => void, onLogoClick: () => void }) {
+export default function Footer({ 
+  onOpenContact, 
+  onLogoClick,
+  onFamilyClick,
+  onSolutionsClick,
+  onFeaturesClick,
+  onPlansClick
+}: { 
+  onOpenContact: () => void, 
+  onLogoClick: () => void,
+  onFamilyClick: () => void,
+  onSolutionsClick: () => void,
+  onFeaturesClick: () => void,
+  onPlansClick: () => void
+}) {
   const { t } = useTranslation();
 
   return (
@@ -36,9 +50,11 @@ export default function Footer({ onOpenContact, onLogoClick }: { onOpenContact: 
           <div>
             <h4 className="text-tsuru-blue font-bold tracking-wide text-lg mb-8">{t('footer.platform')}</h4>
             <ul className="space-y-4 text-gray-400 text-lg">
-              <li><a href="#" className="hover:text-white transition-colors">{t('features.items.0.title')}</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">{t('common.features')}</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">{t('hero.cta')}</a></li>
+              <li><button onClick={onLogoClick} className="hover:text-white transition-colors">{t('common.about')}</button></li>
+              <li><button onClick={onSolutionsClick} className="hover:text-white transition-colors">{t('common.solutions')}</button></li>
+              <li><button onClick={onFeaturesClick} className="hover:text-white transition-colors">{t('common.features')}</button></li>
+              <li><button onClick={onFamilyClick} className="hover:text-white transition-colors">{t('common.family')}</button></li>
+              <li><button onClick={onPlansClick} className="hover:text-white transition-colors">{t('common.plans')}</button></li>
             </ul>
           </div>
 

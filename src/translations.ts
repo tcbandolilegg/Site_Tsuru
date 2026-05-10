@@ -52,7 +52,7 @@ export const translations = {
       annual: "Annual",
       acquire: "Acquire",
       dopamina: {
-        name: "Dopamine",
+        name: "DOPAMINE",
         price: "Free",
         trial: "3 months free",
         features: [
@@ -69,9 +69,9 @@ export const translations = {
         ]
       },
       oxitocina: {
-        name: "Oxytocin",
-        price: "$15.00",
-        priceAnnual: "$150.00",
+        name: "OXYTOCIN",
+        price: "$16.49",
+        priceAnnual: "$164.90",
         features: [
           "Access to list of professionals and institutions",
           "Consultation or exam scheduling - up to 15",
@@ -86,9 +86,9 @@ export const translations = {
         ]
       },
       seratonina: {
-        name: "Serotonin",
-        price: "$35.00",
-        priceAnnual: "$350.00",
+        name: "SEROTONIN",
+        price: "$36.49",
+        priceAnnual: "$364.90",
         features: [
           "Access to list of professionals and institutions",
           "Consultation or exam scheduling - up to 30",
@@ -103,9 +103,9 @@ export const translations = {
         ]
       },
       endorfina: {
-        name: "Endorphin",
-        price: "$100.00",
-        priceAnnual: "$1000.00",
+        name: "ENDORPHIN",
+        price: "$126.49",
+        priceAnnual: "$1264.90",
         features: [
           "Access to list of professionals and institutions",
           "Consultation or exam scheduling - unlimited",
@@ -163,12 +163,12 @@ export const translations = {
     cta: {
       title: "Ready to transform your health care?",
       description: "Let us worry about everything. Your medical history organized, safe and always available.",
-      button: "Create free account",
+      button: "Go to App",
       contact: "Talk to consultant"
     },
     footer: {
       description: "The sacred bird of Japan, symbol of health and longevity. Your medical history managed with intelligence and care.",
-      platform: "Platform",
+      platform: "PLATFORM",
       support: "Support",
       rights: "Tsuru Health Management. All rights reserved.",
       symbolLongevity: "Symbol of Longevity"
@@ -176,7 +176,7 @@ export const translations = {
   },
   "pt-BR": {
     common: {
-      getStarted: "Começar agora",
+      getStarted: "Saiba mais",
       login: "Acessar",
       register: "Cadastre-se",
       learnMore: "Saiba mais",
@@ -210,7 +210,7 @@ export const translations = {
       annual: "Anual",
       acquire: "Adquirir",
       dopamina: {
-        name: "Dopamina",
+        name: "DOPAMINA",
         price: "Free",
         trial: "3 meses grátis",
         features: [
@@ -227,9 +227,9 @@ export const translations = {
         ]
       },
       oxitocina: {
-        name: "Oxitocina",
-        price: "R$ 15,00",
-        priceAnnual: "R$ 150,00",
+        name: "OXITOCINA",
+        price: "R$ 16,49",
+        priceAnnual: "R$ 164,90",
         features: [
           "Acesso a lista de profissionais e instituições",
           "Agendamento de consultas ou exames - até 15",
@@ -244,9 +244,9 @@ export const translations = {
         ]
       },
       seratonina: {
-        name: "Seratonina",
-        price: "R$ 35,00",
-        priceAnnual: "R$ 350,00",
+        name: "SERATONINA",
+        price: "R$ 36,49",
+        priceAnnual: "R$ 364,90",
         features: [
           "Acesso a lista de profissionais e instituições",
           "Agendamento de consultas ou exames - até 30",
@@ -261,9 +261,9 @@ export const translations = {
         ]
       },
       endorfina: {
-        name: "Endorfina",
-        price: "R$ 100,00",
-        priceAnnual: "R$ 1000,00",
+        name: "ENDORFINA",
+        price: "R$ 126,49",
+        priceAnnual: "R$ 1264,90",
         features: [
           "Acesso a lista de profissionais e instituições",
           "Agendamento de consultas ou exames - ilimitado",
@@ -377,12 +377,12 @@ export const translations = {
     cta: {
       title: "Pronto para transformar seu cuidado com a saúde?",
       description: "Deixe que nós nos preocupemos com tudo. Sua história médica organizada, segura e sempre disponível.",
-      button: "Criar conta gratuita",
+      button: "Ir para o App",
       contact: "Falar com consultor"
     },
     footer: {
       description: "A ave sagrada do Japão, símbolo da saúde e longevidade. Sua história médica gerenciada com inteligência e carinho.",
-      platform: "Plataforma",
+      platform: "PLATAFORMA",
       support: "Suporte",
       rights: "Tsuru Health Management. Todos os direitos reservados.",
       symbolLongevity: "Símbolo da Longevidade"
@@ -407,7 +407,7 @@ export const translations = {
   },
   "pt-PT": {
     common: {
-      getStarted: "Começar agora",
+      getStarted: "Saiba mais",
       login: "Aceder",
       register: "Registar-se",
       learnMore: "Saiba mais",
@@ -470,12 +470,12 @@ export const translations = {
     cta: {
       title: "Pronto para transformar o seu cuidado com a saúde?",
       description: "Deixe que nós nos preocupemos com tudo. A sua história médica organizada, segura e sempre disponível.",
-      button: "Criar conta gratuita",
+      button: "Ir para o App",
       contact: "Falar com consultor"
     },
     footer: {
       description: "A ave sagrada do Japão, símbolo da saúde e longevidade. A sua história médica gerida com inteligência e carinho.",
-      platform: "Plataforma",
+      platform: "PLATAFORMA",
       support: "Suporte",
       rights: "Tsuru Health Management. Todos os direitos reservados.",
       symbolLongevity: "Símbolo da Longevidade"

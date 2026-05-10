@@ -23,22 +23,46 @@ export default function App() {
 
   const goToPlans = () => {
     setIsLoginIntent(false);
-    setView('plans');
-    window.scrollTo(0, 0);
+    const element = document.getElementById('plans');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      setView('home');
+      setTimeout(() => {
+        const el = document.getElementById('plans');
+        el?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
   };
 
   const handleAccess = () => {
     setIsLoginIntent(true);
     setSelectedPlan('dopamina');
-    setView('registration');
-    window.scrollTo(0, 0);
+    const element = document.getElementById('registration');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      setView('home');
+      setTimeout(() => {
+        const el = document.getElementById('registration');
+        el?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
   };
 
   const goToRegistration = (plan: string) => {
     setIsLoginIntent(false);
     setSelectedPlan(plan);
-    setView('registration');
-    window.scrollTo(0, 0);
+    const element = document.getElementById('registration');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      setView('home');
+      setTimeout(() => {
+        const el = document.getElementById('registration');
+        el?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
   };
 
   const goToHome = () => {
@@ -85,6 +109,19 @@ export default function App() {
     }
   };
 
+  const scrollToCTA = () => {
+    if (view !== 'home') {
+      setView('home');
+      setTimeout(() => {
+        const element = document.getElementById('cta');
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const element = document.getElementById('cta');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <main className="min-h-screen">
       <Navbar 
@@ -95,27 +132,35 @@ export default function App() {
         onFamilyClick={scrollToFamily}
         onSolutionsClick={scrollToSolutions}
         onFeaturesClick={scrollToFeatures}
+        onCTAClick={scrollToCTA}
       />
       
       {view === 'home' && (
         <>
-          <Hero onRegister={goToPlans} onAccess={handleAccess} />
+          <Hero 
+            onRegister={goToPlans} 
+            onAccess={handleAccess} 
+            onLearnMore={scrollToCTA} 
+          />
           <PainPoints />
           <Features />
           <FamilySection />
+          <Plans onSelectPlan={goToRegistration} />
           <CTA onOpenContact={() => setIsContactOpen(true)} onRegister={goToPlans} onAccess={handleAccess} />
+          <div id="registration" className="py-20 bg-tsuru-bg">
+            <RegistrationForm selectedPlan={selectedPlan} isLoginIntent={isLoginIntent} />
+          </div>
         </>
       )}
 
-      {view === 'plans' && (
-        <Plans onSelectPlan={goToRegistration} />
-      )}
-
-      {view === 'registration' && (
-        <RegistrationForm selectedPlan={selectedPlan} isLoginIntent={isLoginIntent} />
-      )}
-
-      <Footer onOpenContact={() => setIsContactOpen(true)} onLogoClick={goToHome} />
+      <Footer 
+        onOpenContact={() => setIsContactOpen(true)} 
+        onLogoClick={goToHome}
+        onFamilyClick={scrollToFamily}
+        onSolutionsClick={scrollToSolutions}
+        onFeaturesClick={scrollToFeatures}
+        onPlansClick={goToPlans}
+      />
       <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </main>
   );
