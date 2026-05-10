@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import TsuruLogo from "./TsuruLogo";
 
-export default function Hero({ onRegister, onAccess, onLearnMore }: { onRegister: () => void, onAccess: () => void, onLearnMore?: () => void }) {
+export default function Hero({ onRegister, onLearnMore }: { onRegister: () => void, onLearnMore?: () => void }) {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 

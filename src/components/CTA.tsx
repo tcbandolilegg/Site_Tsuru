@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-export default function CTA({ onOpenContact, onRegister, onAccess }: { onOpenContact: () => void, onRegister: () => void, onAccess: () => void }) {
+export default function CTA({ onOpenContact, onRegister }: { onOpenContact: () => void, onRegister: () => void }) {
   const { t } = useTranslation();
 
   return (

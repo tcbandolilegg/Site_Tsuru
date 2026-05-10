@@ -13,7 +13,6 @@ const languages = [
 export default function Navbar({ 
   onOpenContact, 
   onRegister, 
-  onAccess, 
   onLogoClick,
   onFamilyClick,
   onSolutionsClick,
@@ -22,7 +21,6 @@ export default function Navbar({
 }: { 
   onOpenContact: () => void, 
   onRegister: () => void, 
-  onAccess: () => void, 
   onLogoClick: () => void,
   onFamilyClick: () => void,
   onSolutionsClick: () => void,

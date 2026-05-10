@@ -10,12 +10,11 @@ interface PlanProps {
   trial?: string;
   features: string[];
   disabled: string[];
-  onSelect: () => void;
   isPopular?: boolean;
   key?: string | number;
 }
 
-function PlanCard({ name, price, priceAnnual, trial, features, disabled, onSelect, isPopular }: PlanProps) {
+function PlanCard({ name, price, priceAnnual, trial, features, disabled, isPopular }: PlanProps) {
   const { t } = useTranslation();
   const [isAnnual, setIsAnnual] = useState(false);
 
@@ -93,7 +92,7 @@ function PlanCard({ name, price, priceAnnual, trial, features, disabled, onSelec
   );
 }
 
-export default function Plans({ onSelectPlan }: { onSelectPlan: (plan: string) => void }) {
+export default function Plans() {
   const { t, i18n } = useTranslation();
 
   const planData = [
@@ -120,7 +119,6 @@ export default function Plans({ onSelectPlan }: { onSelectPlan: (plan: string) =
               trial={t(`plans.${plan.key}.trial`, { defaultValue: '' })}
               features={t(`plans.${plan.key}.features`, { returnObjects: true }) as string[]}
               disabled={t(`plans.${plan.key}.disabled`, { returnObjects: true }) as string[]}
-              onSelect={() => onSelectPlan(plan.key)}
               isPopular={plan.isPopular}
               key={plan.key}
             />

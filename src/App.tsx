@@ -17,11 +17,8 @@ import ContactModal from "./components/ContactModal";
 export default function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [view, setView] = useState<'home' | 'plans' | 'registration'>('home');
-  const [selectedPlan, setSelectedPlan] = useState('dopamina');
-  const [isLoginIntent, setIsLoginIntent] = useState(false);
 
   const goToPlans = () => {
-    setIsLoginIntent(false);
     const element = document.getElementById('plans');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -35,33 +32,7 @@ export default function App() {
   };
 
   const handleAccess = () => {
-    setIsLoginIntent(true);
-    setSelectedPlan('dopamina');
-    const element = document.getElementById('registration');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      setView('home');
-      setTimeout(() => {
-        const el = document.getElementById('registration');
-        el?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    }
-  };
-
-  const goToRegistration = (plan: string) => {
-    setIsLoginIntent(false);
-    setSelectedPlan(plan);
-    const element = document.getElementById('registration');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      setView('home');
-      setTimeout(() => {
-        const el = document.getElementById('registration');
-        el?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    }
+    window.open('https://www.tsuru.app.br', '_blank', 'noopener,noreferrer');
   };
 
   const goToHome = () => {
@@ -126,7 +97,6 @@ export default function App() {
       <Navbar 
         onOpenContact={() => setIsContactOpen(true)} 
         onRegister={goToPlans}
-        onAccess={handleAccess}
         onLogoClick={goToHome}
         onFamilyClick={scrollToFamily}
         onSolutionsClick={scrollToSolutions}
@@ -138,14 +108,13 @@ export default function App() {
         <>
           <Hero 
             onRegister={goToPlans} 
-            onAccess={handleAccess} 
             onLearnMore={scrollToCTA} 
           />
           <PainPoints />
           <Features />
           <FamilySection />
-          <Plans onSelectPlan={goToRegistration} />
-          <CTA onOpenContact={() => setIsContactOpen(true)} onRegister={goToPlans} onAccess={handleAccess} />
+          <Plans />
+          <CTA onOpenContact={() => setIsContactOpen(true)} onRegister={goToPlans} />
         </>
       )}
 
