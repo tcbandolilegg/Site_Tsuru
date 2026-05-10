@@ -10,7 +10,6 @@ import PainPoints from "./components/PainPoints";
 import Features from "./components/Features";
 import FamilySection from "./components/FamilySection";
 import CTA from "./components/CTA";
-import RegistrationForm from "./components/RegistrationForm";
 import Plans from "./components/Plans";
 import Footer from "./components/Footer";
 import ContactModal from "./components/ContactModal";
@@ -147,9 +146,6 @@ export default function App() {
           <FamilySection />
           <Plans onSelectPlan={goToRegistration} />
           <CTA onOpenContact={() => setIsContactOpen(true)} onRegister={goToPlans} onAccess={handleAccess} />
-          <div id="registration" className="py-20 bg-tsuru-bg">
-            <RegistrationForm selectedPlan={selectedPlan} isLoginIntent={isLoginIntent} />
-          </div>
         </>
       )}
 
