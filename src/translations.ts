@@ -138,7 +138,7 @@ export const translations = {
       ]
     },
     features: {
-      title: "Everything you need in one place",
+      title: "Everything you need in ONE PLACE",
       description: "A simple and intuitive interface allows easy access to your health data. Let us worry about organization.",
       quote: "An interface designed to be fast when you need it most.",
       items: [
@@ -352,7 +352,7 @@ export const translations = {
       ]
     },
     features: {
-      title: "Tudo o que você precisa em um só lugar",
+      title: "Tudo o que você precisa em UM SÓ LUGAR",
       description: "Uma interface simples e intuitiva permite o acesso fácil aos seus dados de saúde. Deixe que nós nos preocupemos com a organização.",
       quote: "Uma interface pensada para ser rápida quando você mais precisa.",
       items: [
@@ -386,6 +386,23 @@ export const translations = {
       support: "Suporte",
       rights: "Tsuru Health Management. Todos os direitos reservados.",
       symbolLongevity: "Símbolo da Longevidade"
+    },
+    contact: {
+      title: "Teleconsulta e Suporte",
+      subtitle: "Estamos aqui para ajudar no que for preciso.",
+      name: "Nome Completo",
+      phone: "Telefone / WhatsApp",
+      email: "E-mail",
+      situation: "Assunto",
+      description: "Descrição",
+      send: "Enviar Mensagem",
+      options: {
+        duvida: "Dúvida",
+        problema: "Problema",
+        denuncia: "Denúncia",
+        sugestao: "Sugestão",
+        elogio: "Elogio"
+      }
     }
   },
   "pt-PT": {
@@ -428,7 +445,7 @@ export const translations = {
       ]
     },
     features: {
-      title: "Tudo o que precisa num único lugar",
+      title: "Tudo o que precisa num ÚNICO LUGAR",
       description: "Uma interface simples e intuitiva permite o acesso fácil aos seus dados de saúde. Deixe que nós nos preocupemos com a organização.",
       quote: "Uma interface pensada para ser rápida quando mais precisa.",
       items: [
@@ -462,6 +479,23 @@ export const translations = {
       support: "Suporte",
       rights: "Tsuru Health Management. Todos os direitos reservados.",
       symbolLongevity: "Símbolo da Longevidade"
+    },
+    contact: {
+      title: "Recolha de Informação",
+      subtitle: "Estamos aqui para ajudar com o que for necessário.",
+      name: "Nome Completo",
+      phone: "Telefone / WhatsApp",
+      email: "E-mail",
+      situation: "Situação",
+      description: "Descrição",
+      send: "Enviar",
+      options: {
+        duvida: "Dúvida",
+        problema: "Problema",
+        denuncia: "Denúncia",
+        sugestao: "Sugestão",
+        elogio: "Elogio"
+      }
     }
   }
 };

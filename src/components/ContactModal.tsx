@@ -55,7 +55,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden border border-tsuru-blue/10"
+            className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-y-auto max-h-[90vh] border border-tsuru-blue/10"
           >
             {/* Header */}
             <div className="bg-tsuru-blue p-8 text-white relative">

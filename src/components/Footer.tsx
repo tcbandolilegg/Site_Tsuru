@@ -14,10 +14,10 @@ export default function Footer({ onOpenContact, onLogoClick }: { onOpenContact: 
               className="flex items-center gap-2 mb-8 cursor-pointer group"
               onClick={onLogoClick}
             >
-              <TsuruLogo className="w-12 h-12 group-hover:scale-110 transition-transform" />
-              <span className="text-3xl font-serif font-bold tracking-tight text-tsuru-blue">Tsuru</span>
+              <TsuruLogo className="w-[58px] h-[58px] group-hover:scale-110 transition-transform" />
+              <span className="text-5xl font-serif font-bold tracking-tight text-tsuru-blue">Tsuru</span>
             </div>
-            <p className="text-gray-400 max-w-sm text-lg leading-relaxed mb-8">
+            <p className="text-gray-400 max-w-sm text-2xl leading-relaxed mb-8">
               {t('footer.description')}
             </p>
             <div className="flex gap-4">
@@ -34,8 +34,8 @@ export default function Footer({ onOpenContact, onLogoClick }: { onOpenContact: 
           </div>
 
           <div>
-            <h4 className="text-tsuru-blue font-bold tracking-wide text-xs mb-8">{t('footer.platform')}</h4>
-            <ul className="space-y-4 text-gray-400">
+            <h4 className="text-tsuru-blue font-bold tracking-wide text-lg mb-8">{t('footer.platform')}</h4>
+            <ul className="space-y-4 text-gray-400 text-lg">
               <li><a href="#" className="hover:text-white transition-colors">{t('features.items.0.title')}</a></li>
               <li><a href="#" className="hover:text-white transition-colors">{t('common.features')}</a></li>
               <li><a href="#" className="hover:text-white transition-colors">{t('hero.cta')}</a></li>
@@ -43,8 +43,8 @@ export default function Footer({ onOpenContact, onLogoClick }: { onOpenContact: 
           </div>
 
           <div>
-            <h4 className="text-tsuru-blue font-bold tracking-wide text-xs mb-8">{t('footer.support')}</h4>
-            <ul className="space-y-4 text-gray-400">
+            <h4 className="text-tsuru-blue font-bold tracking-wide text-lg mb-8">{t('footer.support')}</h4>
+            <ul className="space-y-4 text-gray-400 text-lg">
               <li><button onClick={onOpenContact} className="hover:text-white transition-colors">{t('common.contactUs')}</button></li>
               <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
@@ -54,10 +54,10 @@ export default function Footer({ onOpenContact, onLogoClick }: { onOpenContact: 
         </div>
 
         <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-500 text-xl">
             © {new Date().getFullYear()} {t('footer.rights')}
           </p>
-          <div className="flex items-center gap-2 text-tsuru-blue/60 text-sm">
+          <div className="flex items-center gap-2 text-tsuru-blue/60 text-xl">
             <span>{t('footer.symbolLongevity')}</span>
             <span className="w-1 h-1 bg-tsuru-blue/30 rounded-full" />
             <span>Saúde Connect</span>

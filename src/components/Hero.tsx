@@ -110,7 +110,7 @@ export default function Hero({ onRegister, onAccess }: { onRegister: () => void,
           >
             <div className="flex items-center gap-4 mb-4">
               <div className="bg-white/20 p-3 rounded-2xl">
-                <TsuruLogo className="w-10 h-10" />
+                <TsuruLogo className="w-12 h-12" />
               </div>
               <h4 className="font-serif italic text-xl text-tsuru-blue">{t('common.theTsuru')}</h4>
             </div>
@@ -125,7 +125,7 @@ export default function Hero({ onRegister, onAccess }: { onRegister: () => void,
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             className="absolute -top-10 -left-10 bg-white p-8 rounded-2xl shadow-xl border border-tsuru-blue/10 flex items-center gap-6 hidden lg:flex"
           >
-            <TsuruLogo className="w-12 h-12" />
+            <TsuruLogo className="w-[58px] h-[58px]" />
             <div>
               <div className="text-tsuru-blue text-sm font-bold tracking-tight mb-1">{t('common.symbol')}</div>
               <div className="font-serif italic text-xl text-tsuru-navy">{t('common.longevity')}</div>

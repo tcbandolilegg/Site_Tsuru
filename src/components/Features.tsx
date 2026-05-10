@@ -18,18 +18,21 @@ export default function Features() {
             viewport={{ once: true }}
             id="features-intro"
           >
-            <h2 className="text-5xl font-serif mb-8 text-tsuru-ink">
-              {t('features.title').split('um só lugar')[0]} <br />
-              <span className="text-tsuru-blue">um só lugar</span>
+            <h2 className="text-5xl font-serif mb-8 text-tsuru-ink leading-tight">
+              {t('features.title').split(/(UM SÓ LUGAR|ONE PLACE|ÚNICO LUGAR)/).map((part, i) => 
+                (part === 'UM SÓ LUGAR' || part === 'ONE PLACE' || part === 'ÚNICO LUGAR') ? 
+                <span key={i}><br /><span className="text-tsuru-blue font-bold">{part}</span></span> : 
+                part
+              )}
             </h2>
             <p className="text-lg text-tsuru-muted leading-relaxed mb-8">
               {t('features.description')}
             </p>
-            <div className="space-y-4">
+            <div className="space-y-1">
               {items.map((f, i) => {
                 const Icon = featureIcons[i];
                 return (
-                  <div key={i} className="flex items-center gap-4 p-4 rounded-2xl hover:bg-tsuru-blue/5 transition-colors cursor-default">
+                  <div key={i} className="flex items-center gap-4 p-2 rounded-2xl hover:bg-tsuru-blue/5 transition-colors cursor-default">
                     <div className="bg-tsuru-gold/10 p-2 rounded-lg">
                       <Icon className="w-5 h-5 text-tsuru-gold" />
                     </div>
