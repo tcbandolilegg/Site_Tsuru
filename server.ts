@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 async function startServer() {
   try {
     const app = express();
-    const PORT = process.env.PORT || 3000;
+    const PORT = 3000;
     const isProduction = process.env.NODE_ENV === "production";
 
     // API routes
@@ -34,7 +34,7 @@ async function startServer() {
       }
 
       app.use(express.static(distPath));
-      app.get('*', (req, res) => {
+      app.get('*all', (req, res) => {
         const indexPath = path.join(distPath, 'index.html');
         res.sendFile(indexPath, (err) => {
           if (err) {
